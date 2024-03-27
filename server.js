@@ -89,7 +89,7 @@ app.put('/api/toy/:id', (req, res) => {
         })
 })
 
-const port = 3030
+const port = process.env.PORT || 3030
 app.listen(port, () => {
-    console.log('Server is up and listening to', port);
+    console.log(`Server is up and listening to http://127.0.0.1:${port}/`);
 })
